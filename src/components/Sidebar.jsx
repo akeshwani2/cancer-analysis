@@ -52,7 +52,7 @@ const Sidebar = () => {
                 </div>
             </Link>
 
-            <div className="mt-12 flex w-[90px] flex-1 flex-col items-center justify-between rounded-[20px] bg-[#1c1c24] py-4">
+            <div className="flex w-[80px] flex-col items-center justify-center rounded-[20px] bg-[#1c1c24] py-8">
                 <div className="flex flex-col items-center justify-center gap-20">
                     {
                         navLinks.map((link) => (
@@ -70,6 +70,8 @@ const Sidebar = () => {
                     }
                 </div>
             </div>
+
+            <div className="h-[60px]"></div> {/* Spacer div */}
         </div>
     )
 }
