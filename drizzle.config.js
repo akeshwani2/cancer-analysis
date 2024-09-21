@@ -4,7 +4,7 @@ export default {
     out: "./drizzle",
 
     dbCredentials: {
-        url: 'postgresql://neondb_owner:XpHOs4MQB7gT@ep-steep-brook-a54rg0gq.us-east-2.aws.neon.tech/beat_cancer?sslmode=require',
-        connectionString: 'postgresql://neondb_owner:XpHOs4MQB7gT@ep-steep-brook-a54rg0gq.us-east-2.aws.neon.tech/beat_cancer?sslmode=require',
+        url: 'postgresql://neondb_owner:dEm0V5xfeNpc@ep-round-bar-a5lzxgk0.us-east-2.aws.neon.tech/neondb?sslmode=require',
+        connectionString: 'postgresql://neondb_owner:dEm0V5xfeNpc@ep-round-bar-a5lzxgk0.us-east-2.aws.neon.tech/neondb?sslmode=require',
     }
 }

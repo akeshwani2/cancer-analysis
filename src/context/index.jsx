@@ -24,6 +24,7 @@ export const StateContextProvider = ({ children }) => {
         const defaultUser = {
           username: `User-${privyUserId.slice(-6)}`,
           createdBy: privyUserId,
+          // Add any other required fields here
         };
         const newUser = await db.insert(Users).values(defaultUser).returning().execute();
         setUser(newUser[0]);
@@ -48,6 +49,9 @@ export const StateContextProvider = ({ children }) => {
       console.log("Update result:", result);
       if (result.length > 0) {
         setUser(result[0]);
+        console.log("User state updated:", result[0]);
+      } else {
+        console.log("No user found to update");
       }
     } catch (error) {
       console.error("Error updating user:", error);
@@ -58,6 +62,15 @@ export const StateContextProvider = ({ children }) => {
     if (privyUser?.id) {
       fetchUser(privyUser.id);
     } else {
+      setIsLoading(false);
+    }
+  }, [privyUser, fetchUser]);
+
+  useEffect(() => {
+    if (privyUser?.id) {
+      fetchUser(privyUser.id);
+    } else {
+      setUser(null);
       setIsLoading(false);
     }
   }, [privyUser, fetchUser]);

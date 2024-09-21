@@ -16,15 +16,10 @@ const Home = () => {
   if (isLoading) {
     return <div className="text-white">Loading...</div>;
   }
-
-  const displayName = user?.name || user?.username || privyUser?.id?.slice(-6) || 'Guest';
-
-  console.log("Display name:", displayName);
-
   return (
     <div>
       <h1 className="mb-6 text-3xl font-bold text-white">
-        <span>👋 </span>Welcome, {displayName}!
+        Dashboard
       </h1>
       <DisplayInfo />
     </div>

@@ -13,7 +13,6 @@ const Profile = () => {
   });
   const [isChanged, setIsChanged] = useState(false);
   const [changedFields, setChangedFields] = useState({});
-
   useEffect(() => {
     console.log("Context user in Profile:", contextUser);
     if (contextUser) {
@@ -48,7 +47,7 @@ const Profile = () => {
       console.log("Profile update submitted");
       // Fetch the updated user data
       await fetchUser(privyUser.id);
-      console.log("User data refetched");
+      console.log("User data refetched:", contextUser);
     }
     setIsChanged(false);
     setChangedFields({});
